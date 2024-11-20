@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries Tutorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 2px solid #ddd;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .box {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        /* Basis layout voor grotere schermen */
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* Media query voor schermen kleiner dan 768px */
+        @media (max-width: 768px) {
+            .flex-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .container {
+                background-color: #d3e0ea;
+            }
+        }
+
+        /* Media query voor schermen kleiner dan 480px */
+        @media (max-width: 480px) {
+            .box {
+                width: 100%;
+                background-color: #2196F3;
+            }
+            .container {
+                background-color: #f8d7da;
+                color: #721c24;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Media Queries Tutorial</h1>
+    
+    <!-- Voorbeeld 1: Basis flex-container -->
+    <h2>1. Basis Flexbox Layout</h2>
+    <p>Bekijk hoe de layout verandert afhankelijk van de schermgrootte:</p>
+    <div class="container">
+        <div class="flex-container">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+        <p>Probeer het scherm te verkleinen om te zien hoe de layout zich aanpast.</p>
+    </div>
+
+    <!-- Voorbeeld 2: Achtergrondkleuren aanpassen met media queries -->
+    <h2>2. Achtergrondkleuren aanpassen</h2>
+    <p>De achtergrondkleur verandert wanneer de schermbreedte kleiner wordt:</p>
+    <div class="container">
+        <p>Scherm groter dan 768px: <strong>lichtgrijs</strong></p>
+        <p>Scherm kleiner dan 768px: <strong>blauw-grijs</strong></p>
+        <p>Scherm kleiner dan 480px: <strong>lichtroze</strong></p>
+    </div>
+
+    <!-- Voorbeeld 3: Tekstgrootte aanpassen met media queries -->
+    <h2>3. Tekstgrootte aanpassen</h2>
+    <p>Pas de tekstgrootte aan afhankelijk van de schermgrootte:</p>
+    <div class="container" style="font-size: 1.2em;">
+        <p>Dit is de standaard tekstgrootte.</p>
+    </div>
+
+    <style>
+        /* Media query voor tekstgrootte aanpassing */
+        @media (max-width: 768px) {
+            .container p {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container p {
+                font-size: 1em;
+            }
+        }
+    </style>
+
+    <p>Probeer het scherm te verkleinen om de verandering in tekstgrootte te zien.</p>
+
+    <!-- Voorbeeld 4: Verborgen elementen op kleine schermen -->
+    <h2>4. Elementen verbergen op kleine schermen</h2>
+    <p>Gebruik media queries om elementen te verbergen:</p>
+    <div class="container">
+        <p class="hidden-desktop">Deze tekst is zichtbaar op schermen kleiner dan 768px.</p>
+        <p class="hidden-mobile">Deze tekst is zichtbaar op schermen groter dan 768px.</p>
+    </div>
+
+    <style>
+        /* Verberg elementen afhankelijk van de schermgrootte */
+        @media (max-width: 768px) {
+            .hidden-desktop {
+                display: block;
+            }
+            .hidden-mobile {
+                display: none;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .hidden-desktop {
+                display: none;
+            }
+            .hidden-mobile {
+                display: block;
+            }
+        }
+    </style>
+
+    <!-- Einde van de tutorial -->
+    <p>Speel zelf met media queries om te zien hoe je een website responsief kunt maken!</p>
+</body>
+</html>

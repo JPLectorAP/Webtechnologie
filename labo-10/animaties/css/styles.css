@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Voor alle voorbeelden een basisopmaak */
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  background-color: lightblue;
+  display: inline-block;
+  animation-iteration-count: infinite;
+}
+
+/* 1. animation-name voorbeeld */
+@keyframes moveRight {
+  0% {
+    background-color: maroon;
+    transform: translateX(0);
+  }
+  50% {
+    background-color: olivedrab;
+  }
+  100% {
+    background-color: gold;
+    transform: translateX(400px);
+  }
+}
+
+.example1 {
+  animation-name: moveRight;
+  animation-duration: 2s;
+}
+
+/* 2. animation-duration voorbeeld */
+.example2 {
+  animation-name: moveRight;
+  animation-duration: 5s; /* Langzamere animatie */
+}
+
+/* 3. animation-timing-function voorbeeld */
+.example3 {
+  animation-name: moveRight;
+  animation-duration: 2s;
+  animation-timing-function: ease-out; /* Langzaam aan het begin en eind */
+}
+
+/* 4. animation-delay voorbeeld */
+.example4 {
+  animation-name: moveRight;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-delay: 2s; /* Start na 2 seconden */
+}
+
+/* 5. animation-iteration-count voorbeeld */
+.example5 {
+  animation-name: moveRight;
+  animation-duration: 2s;
+  animation-iteration-count: 3; /* Herhaalt 3 keer */
+}
+
+/* 6. animation-direction voorbeeld */
+.example6 {
+  animation-name: moveRight;
+  animation-duration: 2s;
+  animation-direction: alternate; /* Gaat heen en weer */
+}
+
+/* 7. animation-fill-mode voorbeeld */
+.example7 {
+  animation-name: moveRight;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-delay: 2s;
+  animation-fill-mode:backwards; /* Blijft op de laatste positie */
+}
+
+/* 8. animation-play-state voorbeeld */
+.example8 {
+  animation-name: moveRight;
+  animation-duration: 2s;
+  animation-play-state: paused; /* Animatie is gepauzeerd */
+}
+.example8:hover {
+  animation-play-state: running;
+}
+
+
+
+
+/* Transitions */
+.transition-box {
+  width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin: 50px;
+    transition-property: background-color, width, height; /* Welke eigenschappen veranderen */
+    transition-duration: 2s; /* Duur van de overgang */
+    transition-timing-function: ease-in-out; /* Versnellingscurve van de overgang */
+    transition-delay: 1s; /* Vertraagt de start van de overgang */
+}
+
+.transition-box:hover {
+  background-color: red; /* Verandert de kleur */
+  width: 200px; /* Verandert de breedte */
+  height: 200px; /* Verandert de hoogte */
+}

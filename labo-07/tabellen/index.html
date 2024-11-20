@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tabellen Tutorial</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        caption {
+            caption-side: top;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Tabellen Tutorial</h1>
+    
+    <!-- Voorbeeld 1: Een eenvoudige tabel met rijen en data -->
+    <h2>1. Eenvoudige tabel</h2>
+    <p>Dit is een basis tabel met enkele rijen en cellen:</p>
+    <table>
+        <tr>
+            <td>Cel 1</td>
+            <td>Cel 2</td>
+        </tr>
+        <tr>
+            <td>Cel 3</td>
+            <td>Cel 4</td>
+        </tr>
+        <tr>
+            <td>Cel 5</td>
+            <td>Cel 6</td>
+            <td>Cel 7</td>
+        </tr>
+    </table>
+
+    <!-- Voorbeeld 2: Tabel met kolomkoppen -->
+    <h2>2. Tabel met kolomkoppen</h2>
+    <p>Gebruik het <code>&lt;th&gt;</code> element om kopteksten voor je kolommen te maken:</p>
+    <table>
+        <tr>
+            <th>Naam</th>
+            <th>Leeftijd</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>Lisa</td>
+            <td>34</td>
+        </tr>
+    </table>
+
+    <!-- Voorbeeld 3: Samenvoegen van kolommen met colspan -->
+    <h2>3. Kolommen samenvoegen met <code>colspan</code></h2>
+    <p>Met <code>colspan</code> kun je meerdere kolommen samenvoegen:</p>
+    <table>
+        <tr>
+            <th colspan="2">Samengevoegde kolom</th>
+        </tr>
+        <tr>
+            <td>Cel 1</td>
+            <td>Cel 2</td>
+        </tr>
+    </table>
+
+    <!-- Voorbeeld 4: Samenvoegen van rijen met rowspan -->
+    <h2>4. Rijen samenvoegen met <code>rowspan</code></h2>
+    <p>Met <code>rowspan</code> kun je meerdere rijen samenvoegen:</p>
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Prijs</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Laptop</td>
+            <td>€1000</td>
+        </tr>
+        <tr>
+            <td>€950 (korting)</td>
+        </tr>
+    </table>
+
+    <!-- Voorbeeld 5: Tabelstructuur met <code>thead</code>, <code>tbody</code>, en <code>tfoot</code> -->
+    <h2>5. Structuur met <code>thead</code>, <code>tbody</code>, en <code>tfoot</code></h2>
+    <p>Gebruik <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, en <code>&lt;tfoot&gt;</code> om je tabel op te delen:</p>
+    <table>
+        <caption>Verkoopoverzicht</caption>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Aantal</th>
+                <th>Prijs</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Telefoon</td>
+                <td>5</td>
+                <td>€500</td>
+            </tr>
+            <tr>
+                <td>Tablet</td>
+                <td>3</td>
+                <td>€300</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Totaal</td>
+                <td>€800</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    </body>
+</html>

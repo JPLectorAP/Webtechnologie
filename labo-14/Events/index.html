@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIMYM Events Demo</title>
+    <style>
+        .character {
+            cursor: pointer;
+            margin: 5px 0;
+            transition: background-color 0.3s;
+        }
+        .character:hover {
+            background-color: lightgray;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Personages uit How I Met Your Mother</h1>
+    <ul class="character-list">
+        <li id="ted" class="character">Ted Mosby</li>
+        <li id="robin" class="character">Robin Scherbatsky</li>
+        <li id="barney" class="character">Barney Stinson</li>
+        <li id="lily" class="character">Lily Aldrin</li>
+        <li id="marshall" class="character">Marshall Eriksen</li>
+    </ul>
+
+    <button id="toggleCharacters">Toon/Verberg Personages</button>
+    <section id="output">Event informatie zal hier verschijnen...</section>
+
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

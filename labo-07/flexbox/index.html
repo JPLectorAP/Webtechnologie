@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Tutorial</title>
+    <style>
+        .flex-container {
+            display: flex;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            gap: 10px;
+            list-style-type: none;
+        }
+
+        .flex-item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .flex-item-1 { background-color: #2196F3; }
+        .flex-item-2 { background-color: #f44336; }
+        .flex-item-3 { background-color: #FF9800; }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Tutorial</h1>
+    
+    <!-- Voorbeeld 1: Basis flex-container -->
+    <h2>1. Basis Flexbox Container</h2>
+    <p>Een <code>display: flex;</code> maakt een container flexibel:</p>
+    <ul class="flex-container">
+        <li class="flex-item">Item 1</li>
+        <li class="flex-item">Item 2</li>
+        <li class="flex-item">Item 3</li>
+    </ul>
+
+    <!-- Voorbeeld 2: Richting van de flexbox -->
+    <h2>2. Richting van de Flexbox</h2>
+    <p>Gebruik <code>flex-direction</code> om de richting van de items te veranderen:</p>
+    <ul class="flex-container" style="flex-direction: row;">
+        <li class="flex-item">Row</li>
+        <li class="flex-item">Row</li>
+        <li class="flex-item">Row</li>
+    </ul>
+    <ul class="flex-container" style="flex-direction: column;">
+        <li class="flex-item">Column</li>
+        <li class="flex-item">Column</li>
+        <li class="flex-item">Column</li>
+    </ul>
+
+    <!-- Voorbeeld 3: Uitlijning met justify-content -->
+    <h2>3. Uitlijning met <code>justify-content</code></h2>
+    <p>Gebruik <code>justify-content</code> om de items horizontaal uit te lijnen:</p>
+    <ul class="flex-container" style="flex-direction: row; justify-content: center;">
+        <li class="flex-item">Center</li>
+        <li class="flex-item">Center</li>
+        <li class="flex-item">Center</li>
+    </ul>
+    <ul class="flex-container" style="justify-content: space-between;">
+        <li class="flex-item">Space</li>
+        <li class="flex-item">Between</li>
+        <li class="flex-item">Between</li>
+        <li class="flex-item">Space</li>
+    </ul>
+    <ul class="flex-container" style="justify-content: flex-end;">
+        <li class="flex-item">Flex</li>
+        <li class="flex-item">End</li>
+        <li class="flex-item">Flex</li>
+    </ul>
+
+    <!-- Voorbeeld 4: Uitlijning met align-items -->
+    <h2>4. Uitlijning met <code>align-items</code></h2>
+    <p>Gebruik <code>align-items</code> om de items verticaal uit te lijnen:</p>
+    <ul class="flex-container" style="height: 150px; align-items: center;">
+        <li class="flex-item">Center</li>
+        <li class="flex-item">Center</li>
+        <li class="flex-item">Center</li>
+    </ul>
+    <ul class="flex-container" style="height: 150px; align-items: flex-end;">
+        <li class="flex-item">Flex</li>
+        <li class="flex-item">End</li>
+        <li class="flex-item">Flex</li>
+    </ul>
+
+    <h2>OPGELET!</h2>
+    <p>Wanneer we de <code>flex-direction</code> wijzigen naar <code>flex-direction: column</code> gebruiken we <code>align-items</code> om horizontaal uit te lijnen, en <code>justify-content</code> om verticaal uit te lijnen. Onze hoofdas kantelt, dus we draaien als het ware alles mee.</p>
+    <ul class="flex-container" style="height: 400px; flex-direction: column; justify-content: space-between; align-items: center;">
+        <li class="flex-item">flex-direction: column</li>
+        <li class="flex-item">justify-content: space-between</li>
+        <li class="flex-item">align-items: center</li>
+    </ul>
+
+    <!-- Voorbeeld 5: Flex-grow en flex-shrink -->
+    <h2>5. Flex-grow en Flex-shrink</h2>
+    <p>Gebruik <code>flex-grow</code> om items te laten groeien:</p>
+    <ul class="flex-container">
+        <li class="flex-item" style="flex-grow: 2;">Grow-2</li>
+        <li class="flex-item" style="flex-grow: 1;">Grow-1</li>
+        <li class="flex-item">Standaard</li>
+    </ul>
+    <p>Gebruik <code>flex-shrink</code> om items te laten krimpen:</p>
+    <ul class="flex-container" style="flex-basis: 1;">
+        <li class="flex-item" style="flex-shrink: 1; width: 200px;">Shrink-1</li>
+        <li class="flex-item" style="flex-shrink: 2; width: 300px;">Shrink-2</li>
+        <li class="flex-item" style="width: 300px;">Standaard</li>
+    </ul>
+
+    <!-- Voorbeeld 6: Flex-wrap -->
+    <h2>6. Flex-wrap</h2>
+    <p>Met <code>flex-wrap</code> kun je bepalen of items naar een nieuwe regel moeten gaan als er niet genoeg ruimte is:</p>
+    <ul class="flex-container" style="flex-wrap: wrap;">
+        <li class="flex-item" style="width: 150px;">Item 1</li>
+        <li class="flex-item" style="width: 150px;">Item 2</li>
+        <li class="flex-item" style="width: 150px;">Item 3</li>
+        <li class="flex-item" style="width: 150px;">Item 4</li>
+        <li class="flex-item" style="width: 150px;">Item 5</li>
+        <li class="flex-item" style="width: 150px;">Item 6</li>
+        <li class="flex-item" style="width: 150px;">Item 7</li>
+        <li class="flex-item" style="width: 150px;">Item 8</li>
+        <li class="flex-item" style="width: 150px;">Item 9</li>
+        <li class="flex-item" style="width: 150px;">Item 10</li>
+    </ul>
+
+    <!-- Voorbeeld 7: Combineren van flex-eigenschappen -->
+    <h2>7. Combineren van Flexbox eigenschappen</h2>
+    <p>Probeer verschillende eigenschappen te combineren voor complexe layouts:</p>
+    <ul class="flex-container" style="flex-direction: column; justify-content: space-between; align-items: flex-start; height: 300px;">
+        <li class="flex-item flex-item-1">Item 1</li>
+        <li class="flex-item flex-item-2" style="align-self: center;">Item 2</li>
+        <li class="flex-item flex-item-3" style="align-self: flex-end;">Item 3</li>
+    </ul>
+
+    </body>
+</html>
