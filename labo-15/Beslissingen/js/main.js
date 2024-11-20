@@ -9,6 +9,10 @@ if (leeftijd >= 18) {
     console.log(`${personage} is minderjarig.`);
 }
 
+// -- Ternary operator
+leeftijd = 16;
+leeftijd >= 18 ? console.log(true) : leeftijd > 12 ? console.log("12 < leeftijd < 18") : console.log("leeftijd < 12");
+
 // 2. Logische operatoren
 let isVolwassen = leeftijd >= 18;
 let heeftBeroep = beroepen.includes("architect");

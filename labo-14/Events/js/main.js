@@ -2,6 +2,7 @@
 let characters = document.querySelectorAll(".character");
 characters.forEach(character => {
     character.addEventListener("click", function (event) {
+        console.log(event);
         let output = document.getElementById("output");
         output.innerHTML = `
             <p><strong>Naam:</strong> ${event.target.textContent}</p>
